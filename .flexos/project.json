@@ -1,9 +1,23 @@
 {
-  "name": "{{project_name}}",
-  "slug": "{{project_slug}}",
-  "color": "{{theme_color}}",
-  "ownerId": null,
-  "ownerEmail": null,
-  "createdAt": "{{created_at}}",
-  "version": "0.1.0"
+  "name": "SourceCast",
+  "slug": "sourcecast",
+  "tagline": "Turn your knowledge into shareable, custom podcasts.",
+  "description": "The magic of AI audio overviews, but you sit in the director's chair. Ingest anything, tweak everything, and share beautiful player pages.",
+  "seedId": "iGNSmrZGFRrDvHkEKE3G",
+  "brand": {
+    "color": "#fbbf24",
+    "personality": [
+      "curious",
+      "premium",
+      "editorial",
+      "empowering"
+    ],
+    "values": [
+      "knowledge should be accessible",
+      "creators deserve control",
+      "the source material is sacred"
+    ]
+  },
+  "createdAt": "2026-04-19T20:55:04.651Z",
+  "version": "2.0"
 }

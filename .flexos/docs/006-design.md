@@ -1,3 +1,120 @@
+---
+id: doc-design
+title: SourceCast — Design
+type: doc
+subtype: design
+status: published
+sequence: 6
+createdAt: "2026-04-19T20:55:04.650Z"
+updatedAt: "2026-04-19T20:55:04.650Z"
+---
+
+# Design
+
+SourceCast is an audio product. The design language must reflect the environment where audio lives best: the dark. 
+
+The UI uses a deep, rich dark mode by default. Not flat black, but a sophisticated charcoal (`oklch(18% 0.01 260)`) that feels like the interface of a high-end digital audio workstation or a premium music app like Spotify. Accents are vibrant and energetic—a glowing electric violet and a crisp cyan—used sparingly to draw the eye to primary actions like "Generate" and "Play".
+
+Typography is crucial because the app bridges text and audio. The display font is a sharp, modern sans-serif that looks great in large, cinematic titles on the public player page. The body font is highly legible for reading long transcripts. 
+
+The physical feeling of the app should be tactile. Sliders for length and depth shouldn't just be standard HTML inputs; they should feel like mixing board faders. When the audio is generating, the loading state shouldn't be a spinner—it should be a subtle, pulsing waveform that builds anticipation. 
+
+<flex_block type="tokens">
+{
+  "category": "colors",
+  "mode": "dark",
+  "tokens": {
+    "--color-primary": "oklch(65% 0.25 290)",
+    "--color-primary-hover": "oklch(70% 0.25 290)",
+    "--color-accent": "oklch(75% 0.18 190)",
+    "--color-bg": "oklch(14% 0.01 260)",
+    "--color-surface": "oklch(18% 0.01 260)",
+    "--color-surface-raised": "oklch(22% 0.01 260)",
+    "--color-border": "oklch(26% 0.01 260)",
+    "--color-text": "oklch(95% 0.01 260)",
+    "--color-text-secondary": "oklch(75% 0.01 260)",
+    "--color-text-muted": "oklch(55% 0.01 260)",
+    "--color-success": "oklch(70% 0.15 150)",
+    "--color-warning": "oklch(75% 0.15 50)",
+    "--color-error": "oklch(65% 0.20 20)"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens">
+{
+  "category": "colors",
+  "mode": "light",
+  "tokens": {
+    "--color-primary": "oklch(55% 0.25 290)",
+    "--color-primary-hover": "oklch(50% 0.25 290)",
+    "--color-accent": "oklch(60% 0.18 190)",
+    "--color-bg": "oklch(98% 0.01 260)",
+    "--color-surface": "oklch(100% 0 0)",
+    "--color-surface-raised": "oklch(96% 0.01 260)",
+    "--color-border": "oklch(90% 0.01 260)",
+    "--color-text": "oklch(20% 0.01 260)",
+    "--color-text-secondary": "oklch(45% 0.01 260)",
+    "--color-text-muted": "oklch(65% 0.01 260)",
+    "--color-success": "oklch(55% 0.15 150)",
+    "--color-warning": "oklch(60% 0.15 50)",
+    "--color-error": "oklch(55% 0.20 20)"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens">
+{
+  "category": "typography",
+  "tokens": {
+    "--font-display": "'Outfit', system-ui, sans-serif",
+    "--font-body": "'Inter', system-ui, sans-serif",
+    "--font-mono": "'JetBrains Mono', monospace",
+    "--font-size-xs": "0.75rem",
+    "--font-size-sm": "0.875rem",
+    "--font-size-base": "1rem",
+    "--font-size-lg": "1.125rem",
+    "--font-size-xl": "1.25rem",
+    "--font-size-2xl": "1.5rem",
+    "--font-size-3xl": "2rem",
+    "--font-size-4xl": "2.5rem",
+    "--font-size-5xl": "3.5rem"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens">
+{
+  "category": "spacing",
+  "tokens": {
+    "--space-1": "0.25rem",
+    "--space-2": "0.5rem",
+    "--space-3": "0.75rem",
+    "--space-4": "1rem",
+    "--space-6": "1.5rem",
+    "--space-8": "2rem",
+    "--space-12": "3rem",
+    "--space-16": "4rem",
+    "--space-24": "6rem"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens">
+{
+  "category": "radii",
+  "tokens": {
+    "--radius-sm": "0.375rem",
+    "--radius-md": "0.5rem",
+    "--radius-lg": "0.75rem",
+    "--radius-xl": "1rem",
+    "--radius-2xl": "1.5rem",
+    "--radius-full": "9999px"
+  }
+}
+</flex_block>
+
+<flex_block type="mockup-html" id="public-player">
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -376,3 +493,101 @@
 
 </body>
 </html>
+</flex_block>
+
+---
+
+<flex_block type="tokens" id="blk-001" name="colors">
+{
+  "category": "colors",
+  "mode": "dark",
+  "tokens": {
+    "--color-primary": "oklch(65% 0.25 290)",
+    "--color-primary-hover": "oklch(70% 0.25 290)",
+    "--color-accent": "oklch(75% 0.18 190)",
+    "--color-bg": "oklch(14% 0.01 260)",
+    "--color-surface": "oklch(18% 0.01 260)",
+    "--color-surface-raised": "oklch(22% 0.01 260)",
+    "--color-border": "oklch(26% 0.01 260)",
+    "--color-text": "oklch(95% 0.01 260)",
+    "--color-text-secondary": "oklch(75% 0.01 260)",
+    "--color-text-muted": "oklch(55% 0.01 260)",
+    "--color-success": "oklch(70% 0.15 150)",
+    "--color-warning": "oklch(75% 0.15 50)",
+    "--color-error": "oklch(65% 0.20 20)"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens" id="blk-002" name="colors">
+{
+  "category": "colors",
+  "mode": "light",
+  "tokens": {
+    "--color-primary": "oklch(55% 0.25 290)",
+    "--color-primary-hover": "oklch(50% 0.25 290)",
+    "--color-accent": "oklch(60% 0.18 190)",
+    "--color-bg": "oklch(98% 0.01 260)",
+    "--color-surface": "oklch(100% 0 0)",
+    "--color-surface-raised": "oklch(96% 0.01 260)",
+    "--color-border": "oklch(90% 0.01 260)",
+    "--color-text": "oklch(20% 0.01 260)",
+    "--color-text-secondary": "oklch(45% 0.01 260)",
+    "--color-text-muted": "oklch(65% 0.01 260)",
+    "--color-success": "oklch(55% 0.15 150)",
+    "--color-warning": "oklch(60% 0.15 50)",
+    "--color-error": "oklch(55% 0.20 20)"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens" id="blk-003" name="typography">
+{
+  "category": "typography",
+  "tokens": {
+    "--font-display": "'Outfit', system-ui, sans-serif",
+    "--font-body": "'Inter', system-ui, sans-serif",
+    "--font-mono": "'JetBrains Mono', monospace",
+    "--font-size-xs": "0.75rem",
+    "--font-size-sm": "0.875rem",
+    "--font-size-base": "1rem",
+    "--font-size-lg": "1.125rem",
+    "--font-size-xl": "1.25rem",
+    "--font-size-2xl": "1.5rem",
+    "--font-size-3xl": "2rem",
+    "--font-size-4xl": "2.5rem",
+    "--font-size-5xl": "3.5rem"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens" id="blk-004" name="spacing">
+{
+  "category": "spacing",
+  "tokens": {
+    "--space-1": "0.25rem",
+    "--space-2": "0.5rem",
+    "--space-3": "0.75rem",
+    "--space-4": "1rem",
+    "--space-6": "1.5rem",
+    "--space-8": "2rem",
+    "--space-12": "3rem",
+    "--space-16": "4rem",
+    "--space-24": "6rem"
+  }
+}
+</flex_block>
+
+<flex_block type="tokens" id="blk-005" name="radii">
+{
+  "category": "radii",
+  "tokens": {
+    "--radius-sm": "0.375rem",
+    "--radius-md": "0.5rem",
+    "--radius-lg": "0.75rem",
+    "--radius-xl": "1rem",
+    "--radius-2xl": "1.5rem",
+    "--radius-full": "9999px"
+  }
+}
+</flex_block>
